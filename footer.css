@@ -38,6 +38,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     font-weight: 600;
+    position: relative;
     
     
 }
@@ -54,7 +55,7 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    
+    flex: 1;
 }
 
 
@@ -65,30 +66,27 @@ body {
     border: 1px solid #394969;
     border-radius: 20px;
     padding: 30px;
-    /* margin-left: 30px; */
+    margin: 0;
     background-image: linear-gradient(180deg, rgba(19, 23, 44, 0), #13172C);
     display: none;
+    position: absolute;
+    bottom: 50%;
+    left: 220px;
     transform-origin: left center;
     animation: checkList ease-in 0.5s;
 }
 .check__ser:hover +.check__list {
     display: block;
 }
-/* .check__ser::after {
-    width: 100px;
-    height: 30px;
-    content: "";
-    display: block;
-    background-color: blue;
-} */
+
 .check__list::before {
     position: absolute;
-    left: -10px;
-    width: 100px;
+    left: -50px;
+    width: 100%;
     height: 100px;
     content: "";
     display: block;
-    background-color: red;
+    background-color: transparent;
 }
 @keyframes checkList {
     from {
@@ -98,6 +96,8 @@ body {
         transform: scale(1);
     }
 }
+
+
 .services__contact-left--add {
     width: 511px;
     height: 129px;
@@ -125,15 +125,15 @@ body {
     border-color: linear-gradient(180deg, rgba(19, 23, 44, 0.3), rgb(19, 23, 44));
     border-radius: 20px;
     background-image: linear-gradient(180deg, #999fbe 20%, #13172c);
+    position: relative;
 }
 .dataname {
-    /* font-size: 50px;
-    font-weight: 600px; */
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
+    position: absolute;
+    /* display: none; */
     
    
 }
@@ -143,6 +143,7 @@ body {
     color: white;
     justify-self: center;
     height: 29px;
+    
     /* line-height: 29px; */
 
 }
@@ -177,7 +178,31 @@ body {
     font-size: 29px;
     color: white;
     justify-self: center;
+    cursor: pointer;
 }
+.dataname__form-btn button:hover {
+    color: bisque;
+}
+#btnSummitData: +.dataname {
+    display: none;
+}
+
+.dataNameText {
+    height: 100%;
+    width: 80%;
+    margin:  auto 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    display: none;
+}
+
+
+
+
+
 /* CSS phần footer */
 
 .footer {
