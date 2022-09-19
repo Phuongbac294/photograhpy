@@ -61,7 +61,7 @@ body {
 
 .check__list {
     list-style: none;
-    width: 160px;
+    width: 180px;
     height: auto;
     border: 1px solid #394969;
     border-radius: 20px;
@@ -79,12 +79,12 @@ body {
     display: block;
 }
 
-.check__list::before {
+.check__ser::before {
+    content: "";
     position: absolute;
     left: -50px;
     width: 100%;
-    height: 100px;
-    content: "";
+    height: 150px;
     display: block;
     background-color: transparent;
 }
@@ -96,7 +96,22 @@ body {
         transform: scale(1);
     }
 }
-
+.listLine {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.listLine__money {
+    /* display: none; */
+    position: absolute;
+    left: 160px;
+    top: 0;
+    transform-origin: left center;
+    animation: checkList ease-in 1s;
+}
+/* .listLine:hover .listLine__money {
+    display: block;
+} */
 
 .services__contact-left--add {
     width: 511px;
@@ -183,21 +198,20 @@ body {
 .dataname__form-btn button:hover {
     color: bisque;
 }
-#btnSummitData: +.dataname {
-    display: none;
-}
+
 
 .dataNameText {
-    height: 100%;
+    height: auto;
     width: 80%;
-    margin:  auto 10%;
+    margin: 10%;
+    padding: 50px 0 50px 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-around;
     position: absolute;
     display: none;
 }
+
 
 
 

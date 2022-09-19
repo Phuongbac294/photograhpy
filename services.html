@@ -17,10 +17,10 @@
           <div class="services__contact-left--check">
             <div class="check__ser">Check our service:</div>
             <ul class="check__list">
-              <li class="listLine">Family</li>
-              <li>Potraits</li>
-              <li>Marternity</li>
-              <li>Commercial</li>
+              <li class="listLine">Family : <span class="listLine__money">40$</span></li>
+              <li class="listLine">Potraits : <span class="listLine__money">50$</span></li>
+              <li class="listLine">Marternity : <span class="listLine__money">60$</span></li>
+              <li class="listLine">Commercial : <span class="listLine__money">90$</span></li>
             </ul>
           </div>
           <div class="services__contact-left--add">
@@ -32,7 +32,7 @@
           </p>
         </div>
         <div class="services__contact-right">
-          <form action="" class="dataname">
+          <from action="" class="dataname" id="dataname">
             <div class="dataname__form">
               <label for="fname">Full Name:</label>
               <input type="text" name="fname" id="fname" />
@@ -50,21 +50,25 @@
               <input type="text" name="idea" id="idea" /><br />
             </div>
             <div class="dataname__form-btn">
-              <button type="submit" id="btnSummitData">SUMMIT</button>
+              <button type="submit" id="btnSummitData" 
+              onclick="document.getElementById('dataname').style.display = 'none'; 
+              document.getElementById('dataNameText').style.display='block'">
+              SUMMIT</button>
             </div>
-          </form>
-          <div class="dataNameText">
-            <h2 style="font-size: 2.4rem;">THANK YOU !!!</h2>
-            <p style="font-size: 2rem; text-align: center;">
+          </from>
+          <div class="dataNameText" id="dataNameText">
+            <h2 style="font-size: 2.5rem; text-align: center;">THANK YOU !!!</h2>
+            <p style="font-size: 2.2rem; text-align: center;">
               We've recieved your information. We'll be sending you an email
               with a link to schedule time one of us. It's important that you
               schedule your call as soon as you receive the mail. We're looking
               forward to cooperate with you.
             </p>
-            <p style="font-size: 2rem;">Yours faithfully</p>
+            <p style="font-size: 2.2rem; text-align: center;">Yours faithfully</p>
           </div>
         </div>
       </div>
     </div>
   </body>
+
 </html>
